@@ -1,0 +1,80 @@
+# OffiMesh - AI Indexing Guide
+
+## Overview
+OffiMesh is an offline-first payment infrastructure platform designed for Africa. It enables secure digital payments without internet using QR codes, Bluetooth Low Energy (BLE), and audio signals. Transactions automatically settle through Nomba when connectivity returns.
+
+## Product Information
+
+### What is OffiMesh?
+- Platform for offline peer-to-peer payments
+- Uses QR codes, Bluetooth, and audio for local data transfer
+- Cryptographically secured local ledger
+- Automatic sync and settlement via Nomba
+- Works on Android devices
+
+### Key Features
+- **Offline QR Payments**: Generate/scan dynamic QR codes for instant transfers
+- **Bluetooth Payments**: Direct device-to-device transfer via BLE
+- **Audio Payments**: Data transmission via audio signals
+- **Automatic Sync**: Transactions sync when internet returns
+- **Secure Local Ledger**: Encrypted, tamper-proof storage
+- **Merchant Mode**: POS-optimized interface
+- **Customer Mode**: Streamlined payment experience
+- **Nomba Integration**: Automatic bank settlement
+
+### Security
+- 256-bit end-to-end encryption
+- ECDSA digital signatures
+- Tamper detection via cryptographic hashes
+- Offline verification capabilities
+- Replay attack protection with nonces
+- Keys stored in device TEE (Trusted Execution Environment)
+
+### How It Works
+1. Merchant generates payment request
+2. Customer scans QR or connects via Bluetooth
+3. Payment is signed locally on device
+4. Transaction stored in encrypted local ledger
+5. When internet returns, sync detected
+6. Automatic settlement through Nomba
+
+## Target Audience
+- Merchants in areas with poor connectivity
+- Rural communities in Africa
+- Event vendors and market traders
+- Mobile money agents
+- Anyone needing reliable offline payments
+
+## Technical Stack
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React Icons
+
+## Pages Structure
+- `/` - Landing page
+- `/privacy` - Privacy Policy
+- `/terms` - Terms of Service
+- `/cookies` - Cookies Policy
+- `/security-policy` - Security Policy
+- `/about` - About Us
+- `/blog` - Blog
+- `/careers` - Careers
+- `/press-kit` - Press Kit
+- `/docs` - Developer Documentation
+- `/docs/api` - API Reference
+- `/changelog` - Changelog
+- `/status` - System Status
+- `/brand-assets` - Brand Assets
+
+## Contact
+- Email: contact@offimesh.com
+- Business: business@offimesh.com
+- Support: support@offimesh.com
+- GitHub: github.com/offimesh
+- Twitter: @offimesh
+- LinkedIn: linkedin.com/company/offimesh
+
+## SEO Keywords
+offline payments, Africa fintech, mobile payments, QR payments, Bluetooth payments, offline transactions, Nomba integration, financial inclusion, mesh network payments, digital wallet, peer-to-peer payments, rural payments, merchant POS
