@@ -1,4 +1,5 @@
 'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Shield, Lock, Fingerprint, Eye, RefreshCw, Database, Key, CheckCircle2 } from 'lucide-react';
