@@ -1,4 +1,5 @@
 'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Wifi, Server, Shield, CloudOff, Globe, CreditCard } from 'lucide-react';

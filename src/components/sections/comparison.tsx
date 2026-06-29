@@ -1,4 +1,5 @@
 'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Check, X, Wifi, WifiOff, Shield, Clock, Smartphone, Users, Building2 } from 'lucide-react';
