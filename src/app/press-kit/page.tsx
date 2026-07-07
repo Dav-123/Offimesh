@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 import { Download, FileText, Image, Link2 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -55,9 +54,7 @@ export default function PressKitPage() {
       <div className="flex-1 pt-24 pb-16">
         {/* Hero */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-display-lg font-bold text-dark-900 dark:text-white mb-6">
@@ -66,15 +63,12 @@ export default function PressKitPage() {
             <p className="text-body-xl text-dark-500 dark:text-dark-400">
               Resources for journalists, bloggers, and partners. Everything you need to cover OffiMesh accurately.
             </p>
-          </motion.div>
+          </div>
         </section>
 
         {/* Company Facts */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="glass-card rounded-3xl p-8 md:p-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-8">
@@ -92,15 +86,12 @@ export default function PressKitPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Boilerplate */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
               Company Description (Boilerplate)
@@ -110,28 +101,21 @@ export default function PressKitPage() {
                 OffiMesh is an offline-first digital payment infrastructure built for Africa, where over 60% of the population lacks reliable internet connectivity. Using QR codes, Bluetooth LE, and audio-based data transfer, OffiMesh enables secure peer-to-peer and merchant transactions without requiring an active internet connection. Settlement happens automatically via the Nomba payment gateway when connectivity is restored. Founded in 2025, OffiMesh is on a mission to bring financial inclusion to 350 million Africans who are underserved by traditional digital payment systems.
               </p>
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Downloads */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
               Downloadable Assets
             </h2>
             <div className="space-y-4">
               {downloads.map((item, i) => (
-                <motion.a
+                <a
                   key={item.title}
                   href={item.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
                   className="glass-card rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 hover:border-purple-300 dark:hover:border-purple-700 transition-colors"
                 >
                   <div className="flex items-center gap-4">
@@ -155,18 +139,15 @@ export default function PressKitPage() {
                       <Download className="h-5 w-5 text-white" />
                     </div>
                   </div>
-                </motion.a>
+                </a>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Logo Usage */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
               Logo Usage Guidelines
@@ -191,15 +172,12 @@ export default function PressKitPage() {
                 </ul>
               </div>
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Media Contacts */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="glass-card rounded-3xl p-8 md:p-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -221,7 +199,7 @@ export default function PressKitPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
       </div>
       <Footer />

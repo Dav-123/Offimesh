@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Server, Smartphone, CreditCard, Wifi } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -83,9 +82,7 @@ export default function StatusPage() {
       <div className="flex-1 pt-24 pb-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           {/* Hero */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="mb-12"
           >
             <h1 className="text-display-md font-bold text-dark-900 dark:text-white mb-4">
@@ -94,13 +91,10 @@ export default function StatusPage() {
             <p className="text-body-lg text-dark-500 dark:text-dark-400">
               Real-time status for all OffiMesh services. Last updated: January 15, 2026 at 16:00 UTC.
             </p>
-          </motion.div>
+          </div>
 
           {/* Overall Status */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <div
             className={`glass-card rounded-3xl p-8 mb-12 ${overallStatus === 'operational' ? 'bg-gradient-to-br from-green-600 to-emerald-700' : overallStatus === 'degraded' ? 'bg-gradient-to-br from-yellow-600 to-orange-600' : 'bg-gradient-to-br from-red-600 to-rose-700'}`}
           >
             <div className="flex items-center gap-4">
@@ -124,13 +118,10 @@ export default function StatusPage() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Services */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <section
             className="mb-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -138,11 +129,8 @@ export default function StatusPage() {
             </h2>
             <div className="space-y-4">
               {services.map((service, i) => (
-                <motion.div
+                <div
                   key={service.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.25 + i * 0.05 }}
                   className="glass-card rounded-2xl p-6"
                 >
                   <div className="flex items-start justify-between gap-4">
@@ -174,27 +162,21 @@ export default function StatusPage() {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.section>
+          </section>
 
           {/* Incident History */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+          <section
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
               Incident History
             </h2>
             <div className="space-y-6">
               {incidents.map((incident, i) => (
-                <motion.div
+                <div
                   key={incident.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.45 + i * 0.1 }}
                   className="glass-card rounded-2xl p-6"
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
@@ -225,10 +207,10 @@ export default function StatusPage() {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.section>
+          </section>
         </div>
       </div>
       <Footer />

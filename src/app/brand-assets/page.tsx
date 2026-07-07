@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 import { Palette, Type, Download, CheckCircle, XCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -59,9 +58,7 @@ export default function BrandAssetsPage() {
       <div className="flex-1 pt-24 pb-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Hero */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="text-center mb-16"
           >
             <h1 className="text-display-lg font-bold text-dark-900 dark:text-white mb-4">
@@ -70,13 +67,10 @@ export default function BrandAssetsPage() {
             <p className="text-body-lg text-dark-500 dark:text-dark-400 max-w-2xl mx-auto">
               Official logos, colors, typography, and design guidelines for OffiMesh. Use these resources for partnerships, media, and integrations.
             </p>
-          </motion.div>
+          </div>
 
           {/* Logo */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <section
             className="mb-16"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -117,13 +111,10 @@ export default function BrandAssetsPage() {
               <Download className="h-5 w-5" />
               Download Logo Pack (PNG + SVG)
             </a>
-          </motion.section>
+          </section>
 
           {/* Colors */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <section
             className="mb-16"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -155,13 +146,10 @@ export default function BrandAssetsPage() {
                 </div>
               </div>
             ))}
-          </motion.section>
+          </section>
 
           {/* Typography */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+          <section
             className="mb-16"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -192,13 +180,10 @@ export default function BrandAssetsPage() {
                 </tbody>
               </table>
             </div>
-          </motion.section>
+          </section>
 
           {/* Dos and Don'ts */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+          <section
             className="grid md:grid-cols-2 gap-6"
           >
             <div className="glass-card rounded-2xl p-6">
@@ -229,7 +214,7 @@ export default function BrandAssetsPage() {
                 ))}
               </ul>
             </div>
-          </motion.section>
+          </section>
         </div>
       </div>
       <Footer />

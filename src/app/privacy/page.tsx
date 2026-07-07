@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — OffiMesh',
@@ -104,9 +103,7 @@ export default function PrivacyPolicyPage() {
       <Header />
       <div className="flex-1 pt-24 pb-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="mb-12"
           >
             <h1 className="text-display-md font-bold text-dark-900 dark:text-white mb-4">
@@ -115,15 +112,12 @@ export default function PrivacyPolicyPage() {
             <p className="text-body-lg text-dark-500 dark:text-dark-400">
               Your privacy is fundamental to OffiMesh. This policy explains how we collect, use, and protect your information. Last updated: January 2026.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-8">
             {sections.map((section, i) => (
-              <motion.div
+              <div
                 key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
                 className="prose prose-lg dark:prose-invert max-w-none"
               >
                 <h2 className="text-headline-md font-semibold text-dark-900 dark:text-white mb-4">
@@ -132,14 +126,11 @@ export default function PrivacyPolicyPage() {
                 <div className="text-body-md text-dark-600 dark:text-dark-300 whitespace-pre-line">
                   {section.content}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+          <div
             className="mt-12 glass-card rounded-2xl p-6"
           >
             <h3 className="text-headline-sm font-semibold text-dark-900 dark:text-white mb-2">
@@ -152,7 +143,7 @@ export default function PrivacyPolicyPage() {
               </a>
               {' '}for any privacy-related inquiries.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
       <Footer />

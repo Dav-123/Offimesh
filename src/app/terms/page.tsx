@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {
   title: 'Terms of Service — OffiMesh',
@@ -143,9 +142,7 @@ export default function TermsPage() {
       <Header />
       <div className="flex-1 pt-24 pb-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="mb-12"
           >
             <h1 className="text-display-md font-bold text-dark-900 dark:text-white mb-4">
@@ -154,15 +151,12 @@ export default function TermsPage() {
             <p className="text-body-lg text-dark-500 dark:text-dark-400">
               By using OffiMesh, you agree to these terms. Please read them carefully before using our services. Last updated: January 2026.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-8">
             {sections.map((section, i) => (
-              <motion.div
+              <div
                 key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.03 }}
               >
                 <h2 className="text-headline-md font-semibold text-dark-900 dark:text-white mb-4">
                   {section.title}
@@ -170,14 +164,11 @@ export default function TermsPage() {
                 <div className="text-body-md text-dark-600 dark:text-dark-300 whitespace-pre-line">
                   {section.content}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
+          <div
             className="mt-12 glass-card rounded-2xl p-6"
           >
             <h3 className="text-headline-sm font-semibold text-dark-900 dark:text-white mb-2">
@@ -190,7 +181,7 @@ export default function TermsPage() {
               </a>
               {' '}for clarification on any section.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
       <Footer />
