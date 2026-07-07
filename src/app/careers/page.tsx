@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 import { MapPin, Users, Zap, Heart, Globe, Laptop } from 'lucide-react';
 import Link from 'next/link';
 
@@ -59,9 +58,7 @@ export default function CareersPage() {
       <div className="flex-1 pt-24 pb-16">
         {/* Hero */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-display-lg font-bold text-dark-900 dark:text-white mb-6">
@@ -70,30 +67,23 @@ export default function CareersPage() {
             <p className="text-body-xl text-dark-500 dark:text-dark-400">
               Help us bring offline payments to 350 million Africans. We are looking for brilliant minds who want to make financial inclusion a reality.
             </p>
-          </motion.div>
+          </div>
         </section>
 
         {/* Perks */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="text-center mb-10"
           >
             <h2 className="text-display-sm font-bold text-dark-900 dark:text-white mb-4">
               Why OffiMesh?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {perks.map((perk, i) => (
-              <motion.div
+              <div
                 key={perk.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
                 className="glass-card rounded-2xl p-6 text-center"
               >
                 <div className="w-12 h-12 mx-auto rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4">
@@ -105,17 +95,14 @@ export default function CareersPage() {
                 <p className="text-body-sm text-dark-500 dark:text-dark-400">
                   {perk.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
 
         {/* Open Roles */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="text-center mb-10"
           >
             <h2 className="text-display-sm font-bold text-dark-900 dark:text-white mb-4">
@@ -125,16 +112,12 @@ export default function CareersPage() {
               <Users className="h-5 w-5" />
               <span>4 open roles</span>
             </div>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {roles.map((role, i) => (
-              <motion.div
+              <div
                 key={role.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
                 className="glass-card rounded-2xl p-6 md:p-8"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
@@ -173,17 +156,14 @@ export default function CareersPage() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
 
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="glass-card rounded-3xl p-8 md:p-12 text-center bg-gradient-to-br from-purple-600 to-indigo-700"
           >
             <h2 className="text-display-sm font-bold text-white mb-4">
@@ -198,7 +178,7 @@ export default function CareersPage() {
             >
               Reach Out Anyway
             </a>
-          </motion.div>
+          </div>
         </section>
       </div>
       <Footer />

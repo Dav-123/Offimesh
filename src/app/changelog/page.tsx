@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 import { Zap, Bug, Shield, Smartphone, ArrowUp } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -112,9 +111,7 @@ export default function ChangelogPage() {
       <Header />
       <div className="flex-1 pt-24 pb-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="mb-12"
           >
             <h1 className="text-display-md font-bold text-dark-900 dark:text-white mb-4">
@@ -123,15 +120,12 @@ export default function ChangelogPage() {
             <p className="text-body-lg text-dark-500 dark:text-dark-400">
               Track all updates, improvements, and fixes across OffiMesh releases.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-12">
             {releases.map((release, i) => (
-              <motion.div
+              <div
                 key={release.version}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
               >
                 {/* Version Header */}
                 <div className="flex items-center gap-4 mb-6">
@@ -201,7 +195,7 @@ export default function ChangelogPage() {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

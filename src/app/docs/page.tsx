@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 import { Book, Code, Zap, Shield, Smartphone, QrCode, Bluetooth, CreditCard } from 'lucide-react';
 import Link from 'next/link';
 
@@ -64,9 +63,7 @@ export default function DocsPage() {
       <div className="flex-1 pt-24 pb-16">
         {/* Hero */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="text-center max-w-3xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-body-sm mb-6">
@@ -79,31 +76,24 @@ export default function DocsPage() {
             <p className="text-body-xl text-dark-500 dark:text-dark-400">
               Integrate offline payments into your Android app, merchant platform, or fintech product. Everything you need to accept payments without internet.
             </p>
-          </motion.div>
+          </div>
         </section>
 
         {/* Quick Start Cards */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="text-center mb-8"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white">
               Choose Your Integration
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {quickstart.map((item, i) => (
-              <motion.a
+              <a
                 key={item.title}
                 href={item.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
                 className="glass-card rounded-2xl p-6 hover:border-purple-300 dark:hover:border-purple-700 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4 group-hover:bg-purple-200 dark:group-hover:bg-purple-900/50 transition-colors">
@@ -115,17 +105,14 @@ export default function DocsPage() {
                 <p className="text-body-sm text-dark-500 dark:text-dark-400">
                   {item.description}
                 </p>
-              </motion.a>
+              </a>
             ))}
           </div>
         </section>
 
         {/* Documentation Sections */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-8">
               Documentation
@@ -151,15 +138,12 @@ export default function DocsPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Key Concepts */}
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="glass-card rounded-3xl p-8 md:p-12 bg-gradient-to-br from-purple-600 to-indigo-700"
           >
             <h2 className="text-display-sm font-bold text-white mb-8">
@@ -200,7 +184,7 @@ export default function DocsPage() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </section>
       </div>
       <Footer />

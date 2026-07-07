@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 import { Key, ArrowRight, CheckCircle, AlertCircle, Copy } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -58,9 +57,7 @@ export default function ApiReferencePage() {
       <div className="flex-1 pt-24 pb-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Hero */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="mb-12"
           >
             <h1 className="text-display-md font-bold text-dark-900 dark:text-white mb-4">
@@ -69,13 +66,10 @@ export default function ApiReferencePage() {
             <p className="text-body-lg text-dark-500 dark:text-dark-400">
               REST API for server-side integration with OffiMesh. Use these endpoints to create transactions, check status, and manage settlements.
             </p>
-          </motion.div>
+          </div>
 
           {/* Authentication */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <section
             className="mb-12"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -96,13 +90,10 @@ export default function ApiReferencePage() {
                 Use sk_test_... for sandbox testing. Never expose secret keys in client-side code.
               </div>
             </div>
-          </motion.section>
+          </section>
 
           {/* Base URL */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
+          <section
             className="mb-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -114,13 +105,10 @@ export default function ApiReferencePage() {
                 <Copy className="h-4 w-4" />
               </button>
             </div>
-          </motion.section>
+          </section>
 
           {/* Endpoints */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <section
             className="mb-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -128,11 +116,8 @@ export default function ApiReferencePage() {
             </h2>
             <div className="space-y-3">
               {endpoints.map((endpoint, i) => (
-                <motion.div
+                <div
                   key={endpoint.path}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 + i * 0.05 }}
                   className="glass-card rounded-xl p-4 flex flex-col md:flex-row md:items-center gap-4"
                 >
                   <div className="flex items-center gap-3 min-w-[200px]">
@@ -150,16 +135,13 @@ export default function ApiReferencePage() {
                     {endpoint.description}
                   </p>
                   <ArrowRight className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.section>
+          </section>
 
           {/* Example Request */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+          <section
             className="mb-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -181,13 +163,10 @@ export default function ApiReferencePage() {
 }`}
               </pre>
             </div>
-          </motion.section>
+          </section>
 
           {/* Example Response */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.45 }}
+          <section
             className="mb-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -209,13 +188,10 @@ export default function ApiReferencePage() {
 }`}
               </pre>
             </div>
-          </motion.section>
+          </section>
 
           {/* Error Codes */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+          <section
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
               Error Codes
@@ -240,7 +216,7 @@ export default function ApiReferencePage() {
                 </tbody>
               </table>
             </div>
-          </motion.section>
+          </section>
         </div>
       </div>
       <Footer />

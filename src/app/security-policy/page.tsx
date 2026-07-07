@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { motion } from 'framer-motion';
 import { Shield, Lock, Bug, Eye, FileCode, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -54,9 +53,7 @@ export default function SecurityPolicyPage() {
       <Header />
       <div className="flex-1 pt-24 pb-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="mb-12"
           >
             <h1 className="text-display-md font-bold text-dark-900 dark:text-white mb-4">
@@ -65,13 +62,10 @@ export default function SecurityPolicyPage() {
             <p className="text-body-lg text-dark-500 dark:text-dark-400">
               Security is foundational to OffiMesh. This policy outlines our security practices and how to responsibly report vulnerabilities. Last updated: January 2026.
             </p>
-          </motion.div>
+          </div>
 
           {/* Security Principles */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <section
             className="mb-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -79,11 +73,8 @@ export default function SecurityPolicyPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {principles.map((principle, i) => (
-                <motion.div
+                <div
                   key={principle.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 + i * 0.1 }}
                   className="glass-card rounded-2xl p-6"
                 >
                   <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4">
@@ -95,16 +86,13 @@ export default function SecurityPolicyPage() {
                   <p className="text-body-md text-dark-500 dark:text-dark-400">
                     {principle.description}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.section>
+          </section>
 
           {/* Vulnerability Disclosure */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+          <section
             className="mb-12"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -163,13 +151,10 @@ export default function SecurityPolicyPage() {
                 </ul>
               </div>
             </div>
-          </motion.section>
+          </section>
 
           {/* Scope */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+          <section
             className="mb-12"
           >
             <h2 className="text-headline-lg font-semibold text-dark-900 dark:text-white mb-6">
@@ -201,13 +186,10 @@ export default function SecurityPolicyPage() {
                 </ul>
               </div>
             </div>
-          </motion.section>
+          </section>
 
           {/* Bug Bounty */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+          <section
             className="glass-card rounded-3xl p-6 md:p-8 bg-gradient-to-br from-purple-600 to-indigo-700"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -237,12 +219,9 @@ export default function SecurityPolicyPage() {
                 <span className="text-white font-semibold">Swag + Recognition</span>
               </div>
             </div>
-          </motion.section>
+          </section>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
+          <div
             className="mt-12 glass-card rounded-2xl p-6"
           >
             <h3 className="text-headline-sm font-semibold text-dark-900 dark:text-white mb-2">
@@ -257,7 +236,7 @@ export default function SecurityPolicyPage() {
             <p className="text-body-sm text-dark-400 dark:text-dark-500">
               We respond to all valid reports within 48 hours. PGP key available upon request.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
       <Footer />
