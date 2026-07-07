@@ -13,6 +13,7 @@ const navLinks = [
   { href: '#how-it-works', label: 'How It Works' },
   { href: '#security', label: 'Security' },
   { href: '#developers', label: 'Developers' },
+  { href: '/presentation', label: 'Presentation' },
   { href: '#faq', label: 'FAQ' },
 ];
 
@@ -72,7 +73,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <Button variant="white" asChild>
-              <Link href="#download">Download App</Link>
+              <Link href="/#download">Download App</Link>
             </Button>
           </div>
 

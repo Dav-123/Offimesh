@@ -1,22 +1,20 @@
-'use client';
-
 import Link from 'next/link';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Twitter, Mail } from 'lucide-react';
 
 const footerLinks = {
   product: [
-    { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Security', href: '#security' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Download', href: '#download' },
+    { label: 'Features', href: '/#features' },
+    { label: 'How It Works', href: '/#how-it-works' },
+    { label: 'Security', href: '/#security' },
+    { label: 'Download', href: '/#download' },
+    { label: 'Presentation', href: '/presentation' },
   ],
   company: [
     { label: 'About Us', href: '/about' },
     { label: 'Blog', href: '/blog' },
     { label: 'Careers', href: '/careers' },
     { label: 'Press Kit', href: '/press-kit' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact', href: '/#contact' },
   ],
   resources: [
     { label: 'Developer Docs', href: '/docs' },
@@ -34,9 +32,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
+  { icon: Github, href: 'https://github.com/Dav-123/offimesh', label: 'GitHub' },
   { icon: Twitter, href: 'https://twitter.com/offimesh', label: 'Twitter' },
-  { icon: Linkedin, href: 'https://linkedin.com/company/offimesh', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com/offimesh', label: 'GitHub' },
+  { icon: Mail, href: 'mailto:contact@offimesh.com', label: 'Email' },
 ];
 
 export function Footer() {
@@ -58,7 +56,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-body-sm text-dark-500 dark:text-dark-400 max-w-xs mb-6">
-              Offline-First Payment Infrastructure for Africa. Secure digital payments without internet.
+              Offline-First Payment Infrastructure for Africa. Secure digital payments without internet — powered by QR, Bluetooth, and Nomba settlement.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
@@ -132,7 +130,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-dark-200 dark:border-dark-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-body-sm text-dark-500 dark:text-dark-400">
-            Copyright 2024 OffiMesh. All rights reserved.
+            &copy; 2026 OffiMesh. Built for Africa. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-body-sm text-dark-500 dark:text-dark-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">

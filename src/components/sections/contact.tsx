@@ -1,9 +1,8 @@
 'use client';
-'use client';
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Send, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Send, Github, Twitter, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Contact() {
@@ -18,7 +17,6 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulated form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
     setIsSubmitting(false);
     setSubmitted(true);
@@ -26,8 +24,7 @@ export function Contact() {
   };
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/offimesh', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/offimesh', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/Dav-123/offimesh', label: 'GitHub' },
     { icon: Twitter, href: 'https://twitter.com/offimesh', label: 'Twitter' },
     { icon: Mail, href: 'mailto:contact@offimesh.com', label: 'Email' },
   ];
