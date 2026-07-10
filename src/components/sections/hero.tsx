@@ -1,15 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { ArrowRight, Download, QrCode, Wifi, WifiOff, Smartphone, Shield, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const floatingCards = [
-  { icon: QrCode, label: 'QR Payment', color: 'from-purple-500 to-indigo-600', delay: 0 },
-  { icon: Wifi, label: 'Bluetooth', color: 'from-indigo-500 to-blue-600', delay: 0.2 },
-  { icon: Shield, label: 'Secure', color: 'from-fuchsia-500 to-purple-600', delay: 0.4 },
+  { icon: QrCode, label: 'QR Payment', color: 'from-purple-500 to-indigo-600' },
+  { icon: Wifi, label: 'Bluetooth', color: 'from-indigo-500 to-blue-600' },
+  { icon: Shield, label: 'Secure', color: 'from-fuchsia-500 to-purple-600' },
 ];
 
 export function Hero() {
@@ -26,31 +25,22 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="animate-fade-in-up">
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/40 border border-purple-200 dark:border-purple-800 text-purple-700 dark:text-purple-300 text-body-sm font-medium mb-6"
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/40 border border-purple-800 text-accent text-body-sm font-medium mb-6">
               <Zap className="h-4 w-4" />
-              Offline-First Technology
-            </motion.div>
+              Nomba Dev Career Hackathon
+            </div>
 
             {/* Headline */}
-            <h1 className="text-display-md md:text-display-lg lg:text-display-xl font-bold tracking-tight text-dark-900 dark:text-white mb-6">
+            <h1 className="text-display-md md:text-display-lg lg:text-display-xl font-serif italic tracking-tight text-paper mb-6">
               Payments That Work.
-              <span className="block gradient-text">Even Offline.</span>
+              <span className="block text-accent">Even Offline.</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-body-lg md:text-headline-lg text-dark-500 dark:text-dark-300 max-w-xl mb-8">
-              OffiMesh enables secure digital payments without internet using QR, Bluetooth, and offline communication. Transactions automatically settle through Nomba once connectivity returns.
+            <p className="text-body-lg md:text-headline-lg text-ink-400 max-w-xl mb-8">
+              OffiMesh enables secure digital payments without internet using QR, Bluetooth, and audio transfer. Transactions settle through Nomba when connectivity returns. Built at the Nomba Dev Career Hackathon, June 2026.
             </p>
 
             {/* CTA Buttons */}
@@ -62,8 +52,8 @@ export function Hero() {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="#how-it-works">
-                  How It Works
+                <Link href="/presentation">
+                  View Demo
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -72,27 +62,22 @@ export function Hero() {
             {/* Mini stats */}
             <div className="flex flex-wrap gap-8">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-body-sm text-dark-500 dark:text-dark-400">
-                  100% Uptime Offline
+                <WifiOff className="h-4 w-4 text-accent" />
+                <span className="text-body-sm text-ink-400">
+                  Works Offline
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-                <span className="text-body-sm text-dark-500 dark:text-dark-400">
-                  Bank-Grade Encryption
+                <Shield className="h-4 w-4 text-accent" />
+                <span className="text-body-sm text-ink-400">
+                  Encrypted Transactions
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative flex justify-center"
-          >
+          <div className="relative flex justify-center animate-fade-in-up">
             {/* Phone mockup container */}
             <div className="relative">
               {/* Glow backdrop */}
@@ -100,18 +85,18 @@ export function Hero() {
 
               {/* Phone frame */}
               <div className="relative glass-card rounded-[3rem] p-2 shadow-2xl">
-                <div className="bg-dark-900 dark:bg-dark-950 rounded-[2.5rem] overflow-hidden">
+                <div className="bg-black rounded-[2.5rem] overflow-hidden">
                   {/* Status bar */}
-                  <div className="h-8 bg-dark-800 flex items-center justify-center">
-                    <div className="w-20 h-4 rounded-full bg-dark-700" />
+                  <div className="h-8 bg-ink-900 flex items-center justify-center">
+                    <div className="w-20 h-4 rounded-full bg-ink-700" />
                   </div>
 
                   {/* App content mockup */}
-                  <div className="w-64 md:w-72 h-[420px] md:h-[480px] bg-gradient-to-br from-dark-900 to-dark-800 p-6 flex flex-col">
+                  <div className="w-64 md:w-72 h-[420px] md:h-[480px] bg-gradient-to-br from-ink-900 to-black p-6 flex flex-col">
                     {/* Header */}
                     <div className="text-center mb-6">
-                      <p className="text-dark-400 text-body-sm">Welcome back,</p>
-                      <p className="text-white text-headline-md font-semibold">Adebayo</p>
+                      <p className="text-ink-500 text-body-sm">Welcome back,</p>
+                      <p className="text-paper text-headline-md font-semibold">Adebayo</p>
                     </div>
 
                     {/* Balance Card */}
@@ -132,14 +117,14 @@ export function Hero() {
                     <div className="flex items-center gap-2 rounded-xl bg-amber-500/20 px-4 py-3 mb-4">
                       <WifiOff className="h-5 w-5 text-amber-500" />
                       <div>
-                        <p className="text-white text-body-sm font-medium">Offline Mode Active</p>
-                        <p className="text-dark-400 text-xs">Will auto-sync when connected</p>
+                        <p className="text-paper text-body-sm font-medium">Offline Mode Active</p>
+                        <p className="text-ink-500 text-xs">Will auto-sync when connected</p>
                       </div>
                     </div>
 
                     {/* Recent transactions */}
-                    <div className="flex-1 rounded-xl bg-dark-800/50 p-4">
-                      <p className="text-dark-400 text-body-sm mb-3">Recent Transactions</p>
+                    <div className="flex-1 rounded-xl bg-ink-900/50 p-4">
+                      <p className="text-ink-500 text-body-sm mb-3">Recent Transactions</p>
                       <div className="space-y-3">
                         {[1, 2].map((i) => (
                           <div key={i} className="flex items-center justify-between">
@@ -148,8 +133,8 @@ export function Hero() {
                                 <QrCode className="h-4 w-4 text-purple-400" />
                               </div>
                               <div>
-                                <p className="text-white text-body-sm">Payment</p>
-                                <p className="text-dark-500 text-xs">QR Transfer</p>
+                                <p className="text-paper text-body-sm">Payment</p>
+                                <p className="text-ink-500 text-xs">QR Transfer</p>
                               </div>
                             </div>
                             <p className="text-green-400 text-body-sm">-N {(i * 2500).toLocaleString()}</p>
@@ -163,11 +148,8 @@ export function Hero() {
 
               {/* Floating cards */}
               {floatingCards.map((card, index) => (
-                <motion.div
+                <div
                   key={card.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + card.delay, duration: 0.5 }}
                   className={cn(
                     'absolute glass-card p-3 rounded-xl shadow-lg',
                     index === 0 && 'top-10 -left-8 md:-left-16',
@@ -181,16 +163,16 @@ export function Hero() {
                   )}>
                     <card.icon className="h-5 w-5 text-white" />
                   </div>
-                  <p className="text-body-sm font-medium mt-2 text-dark-900 dark:text-white">
+                  <p className="text-body-sm font-medium mt-2 text-paper">
                     {card.label}
                   </p>
-                </motion.div>
+                </div>
               ))}
 
               {/* Phone indicator */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1 rounded-full bg-dark-300 dark:bg-dark-700" />
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1 rounded-full bg-ink-700" />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
